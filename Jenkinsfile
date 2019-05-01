@@ -11,6 +11,6 @@ node('linux'){
     }
     stage('Deploy')
     {
-        sh 'aws cp 
+
     }
 }
