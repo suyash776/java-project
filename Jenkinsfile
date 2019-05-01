@@ -11,7 +11,9 @@ node('linux'){
     }
     stage('Deploy')
     {
-        sh 'pwd'
+        sh 'echo ${BUILD_NUMBER}'
+        sh 'echo rectangle-${BUILD_NUMBER}.jar'
+        sh 'aws cp /workspace/java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar
  
     }
 }
