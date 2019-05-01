@@ -7,6 +7,10 @@ node('linux'){
     }
     stage('Build')
     {
-        sh 'ant -f build.xml'
+        sh 'ant -f build.xml -v'
+    }
+    stage('Deploy')
+    {
+        sh 'aws cp /workspace/java-pipeline/dist/rectangle-*.jar s3://seis66503-sshrestha/'
     }
 }
