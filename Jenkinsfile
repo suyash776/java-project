@@ -13,7 +13,7 @@ node('linux'){
     {
         sh 'echo ${BUILD_NUMBER}'
         sh 'echo rectangle-${BUILD_NUMBER}.jar'
-        sh 'aws cp /workspace/java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar s3://seis66503-sshrestha/rectangle-${BUILD_NUMBER}.jar'
+        sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar s3://seis66503-sshrestha/rectangle-${BUILD_NUMBER}.jar'
  
     }
 }
