@@ -10,6 +10,7 @@ node('linux'){
     }
     stage('Deploy'){
         sh 'echo deploy'
+        sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar s3:://seis66503-sshrestha/'
     }
     
     stage('Results'){
