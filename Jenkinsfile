@@ -13,6 +13,6 @@ node('linux'){
     }
     
     stage('Results'){
-        junit 'report'
+       sh 'echo report'
     }
 }
