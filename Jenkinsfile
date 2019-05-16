@@ -13,7 +13,7 @@ node('linux'){
         sh 'aws s3 cp /workspace/java-pipeline/dist/rectangle-${BUILD_NUMBER}.jar s3://seis66503-sshrestha/'
     }
     
-    stage('Results'){
-       sh 'echo report'
+    stage('Report'){
+       sh 'aws cloudformation describe-stack-resources --region us-east-1 --stack-name jenkins-stack-hw-10-practise'
     }
 }
